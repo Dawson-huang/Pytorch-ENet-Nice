@@ -3,13 +3,15 @@ Pytorch to train ENet of Cityscapes datasets and CamVid datasets nicely
 
 # Nice discovery
 
+coming soon!
+
 # Environment
 
     pytorch1.0
     python3.6
 
 # Train Cityscapes datasets
-  Please download the fine labeled Cityscapes dataset leftImg8bit_trainvaltest.zip (11GB) and the corresponding ground truth gtFine_trainvaltest.zip (241MB) from the [Cityscapes website](https://www.cityscapes-dataset.com/). In addition, clone the cityscapesScripts repository:
+  Please download the fine labeled Cityscapes dataset **leftImg8bit_trainvaltest.zip (11GB)** and the corresponding ground truth **gtFine_trainvaltest.zip (241MB)** from the [Cityscapes website](https://www.cityscapes-dataset.com/). In addition, clone the cityscapesScripts repository:
 
     $ git clone https://github.com/mcordts/cityscapesScripts.git
 
@@ -17,11 +19,22 @@ After that, run the `/preparation/createTrainIdLabelImags.py` script, to convert
 
 ## Data preprocess
 
-Accelerated training
+Accelerated training (coming soon!)
 
-## Train ENet-encoder
+## Train ENet encoder architecture
 
+## Train ENet encoder-decoder architecture
+
+pretrain model (coming soon!)
 
 # Train CamVid datasets
 
-## Train ENet-encoder
+## Data preprocess
+
+Accelerated training(coming soon!)
+
+## Train ENet encoder architecture
+
+## Train ENet encoder-decoder architecture
+
+pretrain model(coming soon!)
