@@ -1,7 +1,13 @@
 # Pytorch-ENet-Nice
 Pytorch to train ENet of Cityscapes datasets and CamVid datasets nicely
 
-# result
+# Cityscapes datasets result
+
+![cityscapes](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/cityscapes_model/Cityscapes.png?raw=true)
+
+# CamVid datasets result
+
+![camvid](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/camvid_model/CamVid.png?raw=true)
 
 # Nice discovery
 
