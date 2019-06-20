@@ -57,7 +57,7 @@ Finaly use the executable file`Pytorch-ENet-Nice/datasets/Cityscapes/scaleDownSa
         - train
         - val
 
-After that, you should `cd ./datasets/Cityscapes/scaleDownSampling/`, and generate training data of encoder-decoder architecture:
+After that, you should `cd ./datasets/Cityscapes/scaleDownSampling/`, and generate training data of size `1024*512` to encoder-decoder architecture:
     
     ./scaleDownSampling ../train_cityscapes.txt ../.. Cityscapes/scale_train_cityscapes.txt Cityscapes 0.5 0.5 0.5 0.5
     
@@ -89,7 +89,7 @@ else:
 
 # Train CamVid datasets
 
-CamVid datasets is already save in `Pytorch-ENet-Nice/datasets/CamVid/` 
+CamVid datasets is already save in `Pytorch-ENet-Nice/datasets/CamVid/`，use size `480*360` of CamVid datasets to train ENet. 
 
 ### Train ENet encoder architecture
 
