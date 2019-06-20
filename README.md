@@ -1,11 +1,11 @@
 # Pytorch-ENet-Nice
 Pytorch to train ENet of Cityscapes datasets and CamVid datasets nicely
 
-## Cityscapes datasets result
+## Cityscapes model result
 
 ![cityscapes](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/cityscapes_model/Cityscapes.png?raw=true)
 
-## CamVid datasets result
+## CamVid model result
 
 ![camvid](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/camvid_model/CamVid.png?raw=true)
 
@@ -109,7 +109,7 @@ else:
     python3 init.py --mode train --cuda=True
 
 # Test
-
+[Cityscapes model](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/cityscapes_model/ckpt-enet-134-1.25e-06-96.66597379744053.pth) and [CamVid model](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/camvid_model/ckpt-enet-198-3.0517578125e-07-9.757900461554527.pth) is open source and save in the `test` directory.
 ### Test cityscapes model
   
 You can find the pretrained model in `Pytorch-ENet-Nice/test/cityscapes_model/`, then run:
