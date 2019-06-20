@@ -73,7 +73,8 @@ if you want to train encoder architecture only, then you can run :
 
 ### Train ENet-encoder architecture
 
-     
+models will save in `logs`, you should pre-create the directory folder as `Pytorch-ENet-Nice/logs`
+
     python3 init.py --mode train --cuda=True --num-classes=19 --input-path-train=./datasets/Cityscapes/scaleDownSampling/encoder_Cityscapes/encoder_train_cityscapes.txt --input-path-val=./datasets/Cityscapes/scaleDownSampling/encoder_Cityscapes/encoder_val_cityscapes.txt --cityscapes_path=./datasets/Cityscapes/scaleDownSampling --train_mode=encoder
     
 
@@ -92,6 +93,8 @@ else:
 CamVid datasets is already save in `Pytorch-ENet-Nice/datasets/CamVid/`，use size `480*360` of CamVid datasets to train ENet. 
 
 ### Train ENet encoder architecture
+
+models will save in `logs`, you should pre-create the directory folder as `Pytorch-ENet-Nice/logs`
 
     python3 init.py --mode train --cuda=True --train_mode=encoder
 
