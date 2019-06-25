@@ -1,11 +1,11 @@
 # Pytorch-ENet-Nice
 Pytorch to train ENet of Cityscapes datasets and CamVid datasets nicely
 
-# Cityscapes datasets result
+## Cityscapes model result
 
 ![cityscapes](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/cityscapes_model/Cityscapes.png?raw=true)
 
-# CamVid datasets result
+## CamVid model result
 
 ![camvid](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/camvid_model/CamVid.png?raw=true)
 
@@ -34,7 +34,7 @@ argv[8]: Label y-axis reduction ratio
 
 # Train Cityscapes datasets
 
-## Data preprocess
+### Data preprocess
 
   Please download the fine labeled Cityscapes dataset **leftImg8bit_trainvaltest.zip (11GB)** and the corresponding ground truth **gtFine_trainvaltest.zip (241MB)** from the [Cityscapes website](https://www.cityscapes-dataset.com/) and unzip in `./datasets/Cityscapes/`. In addition, clone the cityscapesScripts repository:
 
@@ -57,7 +57,7 @@ Finaly use the executable file`Pytorch-ENet-Nice/datasets/Cityscapes/scaleDownSa
         - train
         - val
 
-After that, you should `cd ./datasets/Cityscapes/scaleDownSampling/`, and generate training data of encoder-decoder architecture:
+After that, you should `cd ./datasets/Cityscapes/scaleDownSampling/`, and generate training data of size `1024*512` to encoder-decoder architecture:
     
     ./scaleDownSampling ../train_cityscapes.txt ../.. Cityscapes/scale_train_cityscapes.txt Cityscapes 0.5 0.5 0.5 0.5
     
@@ -71,13 +71,14 @@ if you want to train encoder architecture only, then you can run :
 
 **!!! Strongly recommended to pre-generate data to accelerated training !!!**
 
-## Train ENet-encoder architecture
+### Train ENet-encoder architecture
 
-     
+models will save in `logs`, you should pre-create the directory folder as `Pytorch-ENet-Nice/logs`
+
     python3 init.py --mode train --cuda=True --num-classes=19 --input-path-train=./datasets/Cityscapes/scaleDownSampling/encoder_Cityscapes/encoder_train_cityscapes.txt --input-path-val=./datasets/Cityscapes/scaleDownSampling/encoder_Cityscapes/encoder_val_cityscapes.txt --cityscapes_path=./datasets/Cityscapes/scaleDownSampling --train_mode=encoder
     
 
-## Train ENet encoder-decoder architecture
+### Train ENet encoder-decoder architecture
 
 if you have trained ENet-encoder architecture, run this command:
 
@@ -89,13 +90,15 @@ else:
 
 # Train CamVid datasets
 
-CamVid datasets is already save in `Pytorch-ENet-Nice/datasets/CamVid/` 
+CamVid datasets is already save in `Pytorch-ENet-Nice/datasets/CamVid/`，use size `480*360` of CamVid datasets to train ENet. 
 
-## Train ENet encoder architecture
+### Train ENet encoder architecture
+
+models will save in `logs`, you should pre-create the directory folder as `Pytorch-ENet-Nice/logs`
 
     python3 init.py --mode train --cuda=True --train_mode=encoder
 
-## Train ENet encoder-decoder architecture
+### Train ENet encoder-decoder architecture
 
 if you have trained ENet-encoder architecture, run this command:
 
@@ -106,14 +109,14 @@ else:
     python3 init.py --mode train --cuda=True
 
 # Test
-
-## Test cityscapes model
+[Cityscapes model](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/cityscapes_model/ckpt-enet-134-1.25e-06-96.66597379744053.pth) and [CamVid model](https://github.com/Dawson-huang/Pytorch-ENet-Nice/blob/master/test/camvid_model/ckpt-enet-198-3.0517578125e-07-9.757900461554527.pth) is open source and save in the `test` directory.
+### Test cityscapes model
   
 You can find the pretrained model in `Pytorch-ENet-Nice/test/cityscapes_model/`, then run:
 
     python3 init.py --mode test --num-classes=19 --cuda=True -m=./test/cityscapes_model/ckpt-enet-134-1.25e-06-96.66597379744053.pth -i=./test/munich_000000_000019_leftImg8bit.png
 
-## Test camvid model
+### Test camvid model
 
 You can find the pretrained model in `Pytorch-ENet-Nice/test/camvid_model/`, then run:
 
