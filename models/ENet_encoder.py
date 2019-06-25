@@ -1,19 +1,3 @@
-##################################################################
-# Reproducing the paper                                          #
-# ENet - Real Time Semantic Segmentation                         #
-# Paper: https://arxiv.org/pdf/1606.02147.pdf                    #
-#                                                                #
-# Copyright (c) 2019                                             #
-# Authors: @iArunava <iarunavaofficial@gmail.com>                #
-#          @AvivSham <mista2311@gmail.com>                       #
-#                                                                #
-# License: BSD License 3.0                                       #
-#                                                                #
-# The Code in this file is distributed for free                  #
-# usage and modification with proper credits                     #
-# directing back to this repository.                             #
-##################################################################
-
 import torch
 import torch.nn as nn
 from .InitialBlock import InitialBlock

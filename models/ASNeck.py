@@ -1,15 +1,3 @@
-###################################################
-# Copyright (c) 2019                              #
-# Authors: @iArunava <iarunavaofficial@gmail.com> #
-#          @AvivSham <mista2311@gmail.com>        #
-#                                                 #
-# License: BSD License 3.0                        #
-#                                                 #
-# The Code in this file is distributed for free   #
-# usage and modification with proper linkage back #
-# to this repository.                             #
-###################################################
-
 import torch
 import torch.nn as nn
 

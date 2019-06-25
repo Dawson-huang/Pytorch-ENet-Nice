@@ -38,8 +38,6 @@ def test(FLAGS):
     with torch.no_grad():
         out1 = enet(tmg.cuda().float()).squeeze(0)##dawson add gpu mode
     
-    #smg_ = Image.open('/content/training/semantic/' + fname)
-    #smg_ = cv2.resize(np.array(smg_), (512, 512), cv2.INTER_NEAREST)
 
     b_ = out1.data.max(0)[1].cpu().numpy()
 
